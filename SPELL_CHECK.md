@@ -15,6 +15,7 @@ Please contact us if anything in the instructions is confusing. We've tried to l
 ## The Problem
 
 Write a program that checks spelling. The input to the program is a dictionary file containing a list of valid English words and a file containing the text to be checked.
+You can use the `dictionary.txt` file included here as your dictionary.
 
 The program should run on the command line like so:
 
@@ -35,4 +36,4 @@ Your program should support the following features (time permitting):
 
 ## Instructions For Submission
 
-Please email us a link to a GitHub repository. Include a `README.md` file with notes for us. If your code runs, please include instructions for running it.
+Please email us a link to a GitHub repository containing your code. Include a `README.md` file with notes for us. If your code runs, please include instructions for running it.
