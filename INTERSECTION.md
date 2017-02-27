@@ -1,19 +1,5 @@
 # Make a Traffic Intersection!
 
-We want to see code you've written. Some people don't have open source or freely available code they can share, so we have some short code challenges they can do.
-
-Use whatever language and tech stack you're most comfortable with.
-
-Please try not to spend more than two hours coding. This is to protect you; we don't want you to spend hours coding only for either one of us to decide later we aren't a good fit for each other.
-
-Just like in real life, you can use the internet to help you remember some syntax or figure out a library. Unlike real life, you *should not* use someone else's solution for the coding challenge. Use good judgement. Googling how to read in a file is fine. Googling "how does a spell-checker work" to get a basic idea of an algorithm is fine. Copying and pasting a spell-checker you've found online is not fine.
-
-The goal isn't to finish the assignment (though we won't complain if you do!). The goal is to see how you approach a problem. Can you decide on and implement an algorithm? What data structures do you use? How do you organize your code? What parts of the problem seem most important to solve?
-
-Please contact us if anything in the instructions is confusing. We've tried to leave space for creativity and problem-solving, but we also don't want you becoming frustrated or stuck.
-
-## The Problem
-
 Write a program that models a traffic intersection.
 
 The intersection is a four-way intersection. Each part of the intersection has four lanes:
