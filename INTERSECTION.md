@@ -26,3 +26,80 @@ Your program should support the following features (time permitting):
 ## Instructions For Submission
 
 Please email us a link to a GitHub repository. Include a `README.md` file with notes for us. If your code runs, please include instructions for running it.
+
+*********************************************************************************************************
+
+## Suedo Program ;)
+
+### Lights
+- run on timer
+- 3 colors (red, yellow, and blue)
+
+### Cars
+- move forward
+- turn right or left
+- respond to light
+-- stop when light is red
+-- go when light is green
+--- go left when left arrow is green
+--- go straight when straight light is green
+
+### World
+- 4 directions, 4 lanes per direction
+- 8 traffic lights (4 straight, 4 turn)
+- spawns cars
+
+Car
+	- properties
+	-- direction
+	-- isStopped
+
+	- methods
+	-- checkDirection
+	-- changDirection
+	-- checkLight
+	-- move
+	-- stop
+
+	move
+	- checkDirection
+	- is it clear to move in that direction?
+		-- location + 1
+		else
+		-- stop
+
+	- checkLight( isGreen? ){
+		continue moving()
+	} else {
+		move until last available spot
+	}
+
+TrafficLight
+	- properties
+	-- color
+	-- timer = 10 seconds
+
+	- methods
+	-- changeColor
+	-- getColor
+
+	changeColor
+	- what color am I?
+	if green,
+	- turn yellow, wait 2 secs, changeColor.
+	else if yellow,
+	- turn red.
+	else if red,
+	- turn green
+
+
+World
+	- properties
+	-- lanes
+	-- cars
+	-- lights
+	-- grid
+
+	- methods
+	-- setupWorld
+	-- spawnCar
