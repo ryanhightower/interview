@@ -1,18 +1,20 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
-  </div>
+	<div id="app">
+		<world></world>
+	</div>
 </template>
 
 <script>
 import Hello from './components/Hello'
+import World from './components/World'
 
 export default {
-  name: 'app',
-  components: {
-    Hello
-  }
+	name: 'app',
+	components: {
+		Hello,
+		World
+	},
+	methods: {}
 }
 </script>
 
