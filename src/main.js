@@ -3,11 +3,20 @@
 import Vue from 'vue'
 import App from './App'
 
+const events = new Vue()
+
 Vue.config.productionTip = false
+Vue.mixin({
+	data: function () {
+		return {
+			events
+		}
+	}
+})
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  template: '<App/>',
-  components: { App }
+	el: '#app',
+	template: '<App/>',
+	components: { App }
 })
