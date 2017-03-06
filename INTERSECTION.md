@@ -29,7 +29,7 @@ Please email us a link to a GitHub repository. Include a `README.md` file with n
 
 *********************************************************************************************************
 
-## Suedo Program ;)
+## Pseudo Program ;)
 
 ### Lights
 - run on timer
