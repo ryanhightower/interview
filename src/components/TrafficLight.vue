@@ -7,13 +7,12 @@
 
 <script>
 export default {
-	props: ['direction'],
+	props: ['direction', 'yellowDelay', 'greenDelay'],
 	name: 'TrafficLight',
 	data: function () {
 		return {
 			colors: [ 'red', 'yellow', 'green' ],
 			color: this.direction === 'ns' ? 'green' : 'red',
-			yellowDelay: 500,
 			prevDirection: 'ns'
 		}
 	},
@@ -28,7 +27,7 @@ export default {
 			case 'red':
 				setTimeout(function () {
 					this.color = 'green'
-				}.bind(this), this.yellowDelay + 300)
+				}.bind(this), this.yellowDelay + this.greenDelay)
 				break
 			case 'yellow':
 				this.color = 'red'

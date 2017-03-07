@@ -4,28 +4,31 @@
 
 <script>
 export default {
+	props: ['time'],
 	data () {
 		return {
-			directions: ['ns', 'ew', 'nwse', 'wsen'],
+			directions: ['ns', 'nwse', 'ew', 'wsen'],
 			direction: 'ns',
-			time: 3000
+			lightTimer: undefined
 		}
 	},
 	mounted () {
-		if (lightTimer) lightTimer.clearTimeout()
-		let lightTimer = setTimeout(function timer () {
-			this.changeTrafficDirection()
-			setTimeout(timer.bind(this), this.time)
-		}.bind(this), this.time)
+		this.setTimer()
 	},
 	methods: {
-		changeTrafficDirection: function () {
+		changeTrafficDirection () {
 			let index = this.directions.indexOf(this.direction) + 1
 			if (index >= this.directions.length) index = 0
 			this.direction = this.directions[index]
 			console.log('changing to: ', this.direction)
 			this.events.$emit('direction', this.direction)
-			store.direction = this.direction
+		},
+		setTimer () {
+			if (this.lightTimer) this.lightTimer.clearTimeout()
+			this.lightTimer = setTimeout(function timer () {
+				this.changeTrafficDirection()
+				setTimeout(timer.bind(this), this.time)
+			}.bind(this), this.time)
 		}
 	}
 }
